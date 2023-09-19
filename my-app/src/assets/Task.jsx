@@ -4,19 +4,19 @@ import styled from "styled-components";
 
 // Définition d'un composant Container avec des styles CSS
 const Container = styled.div`
-  border-radius: 10px; // Coins arrondis
-  box-shadow: 5px 5px 5px 2px grey; // Ombre
-  padding: 8px; // Espacement intérieur
-  color: #000; // Couleur du texte
-  margin-bottom: 8px; // Marge en bas
-  min-height: 90px; // Hauteur minimale
-  margin-left: 10px; // Marge à gauche
-  margin-right: 10px; // Marge à droite
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px grey;
+  padding: 8px;
+  color: #000;
+  margin-bottom: 8px;
+  min-height: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: ${(props) => bgcolorChange(props)}; // Couleur de fond déterminée dynamiquement
   cursor: pointer; // Curseur de type pointeur
-  display: flex; // Affichage en tant que boîte flexible
-  justify-content: space-between; // Espace entre les éléments internes
-  flex-direction: column; // Disposition en colonne
+  display: flex; 
+  justify-content: space-between; 
+  flex-direction: column; 
 `;
 
 // Composant TextContent pour le contenu textuel

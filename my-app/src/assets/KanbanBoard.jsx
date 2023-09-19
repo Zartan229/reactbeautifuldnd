@@ -59,17 +59,20 @@ export default function KanbanBoard() {
     });
   };
 
-  // Fonction pour créer un nouveau tableau (board)
-  const addNewBoard = () => {
+// Fonction pour créer un nouveau tableau (board) avec un nom personnalisé
+const addNewBoard = () => {
+  const newBoardName = prompt("Entrez un nom pour le nouveau tableau :");
+  if (newBoardName) {
+    // Vérifie si l'utilisateur a saisi un nom (non vide)
     const newBoardId = `board${Object.keys(boards).length + 1}`;
-    const newBoardTitle = `Tableau ${Object.keys(boards).length + 1}`;
-
-    // Ajouter un nouveau tableau avec un titre vide et aucune tâche
+    
+    // Ajouter un nouveau tableau avec le nom saisi et aucune tâche
     setBoards({
       ...boards,
-      [newBoardId]: { title: newBoardTitle, tasks: [] },
+      [newBoardId]: { title: newBoardName, tasks: [] },
     });
-  };
+  }
+};
 
   // Rendu de l'application avec les tableaux et le bouton pour ajouter un nouveau tableau
   return (
